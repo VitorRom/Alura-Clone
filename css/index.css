@@ -848,7 +848,7 @@ button {
     width: 21px;
     height: 21px;
     margin-right: 5px;
-    background-image: url(../imagens/bolinha-progresso-curso.png)
+    background-image: url('../imagens/bolinha-progresso-curso.png')
 }
 
 .progresso-curso-atual {
