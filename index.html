@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link
+        href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Open+Sans:400,300,600,700,800|Source+Serif+Pro"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dashboard</title>
+</head>
+
+<header class="header">
+
+    <div class="faixa-header"><label class="label-busca" for="headerBusca-campoBusca">O que você quer aprender?</label>
+        <div class="input-wrapper">
+            <input class="input-header" type="text" placeholder="Java, Python, Power BI, Figma...">
+            <div class="linha-vertical-header"></div>
+            <button id="btn-pesquisar">Pesquisar</button>
+        </div>
+        <button class="botao-cancelar-pesquisa" aria-label="Fechar barra de busca" aria-expanded="true"></button>
+    </div>
+
+    <nav class="nav-bar">
+        <img id="imagem-logo" src="imagens/logo_home_alura.png" alt="">
+        <div class="linha-vertical"></div>
+        <img id="imagem-postech" src="imagens/imagem_postech_nav_bar.png" alt="">
+        <img id="imagem-busca" src="imagens/icone_busca.png" alt="">
+
+        <ul class="nav-bar-ul">
+            <li class="item-de-navegacao"><a href="">Dashboard</a></li>
+            <li class="item-de-navegacao"><button class="nome-item-de-navegacao" id="nome-item-nav-estudar"
+                    aria-controls="begin-menu" aria-expanded="false">Estudar <div class="linha-nav-nome" style="width: 0px;"
+                        id="linha-nav-estudar"></div><img  class="seta-baixo" id="seta-estudar"  src="imagens/seta_baixo.png" alt=""></button>
+            </li>
+
+            <li class="item-de-navegacao"><button class="nome-item-de-navegacao" id="nome-item-nav-aprofundar"
+                    aria-controls="begin-menu" aria-expanded="false">Aprofundar<div class="linha-nav-nome" style="width: 0px;"
+                        id="linha-nav-aprofundar"></div><img  class="seta-baixo" id="seta-aprofundar" src="imagens/seta_baixo.png"
+                        alt=""></button>
+            </li>
+            <li class="item-de-navegacao"><button class="nome-item-de-navegacao" id="nome-item-nav-praticar"
+                    aria-controls="begin-menu" aria-expanded="false">Praticar<div class="linha-nav-nome" style="width: 0px;"
+                        id="linha-nav-praticar"></div><img class="seta-baixo" id="seta-praticar"  src="imagens/seta_baixo.png" alt=""></button>
+            </li>
+            <li class="item-de-navegacao"><button class="nome-item-de-navegacao" id="nome-item-nav-comunidade"
+                    aria-controls="begin-menu" aria-expanded="false">Comunidade<div class="linha-nav-nome" style="width: 0px;"
+                        id="linha-nav-comunidade"></div><img class="seta-baixo"  id="seta-comunidade" src="imagens/seta_baixo.png"
+                        alt=""></button>
+            </li>
+        </ul>
+        <img id="icone-sininho" src="imagens/icone_sininho.png" alt="">
+        <img src="imagens/icone_nome.png" alt="">
+        <li class="item-de-navegacao"><button class="nome-item-de-navegacao" id="btn-nome" aria-controls="begin-menu"
+                aria-expanded="false">
+                <div class="linha-nav-nome" id="linha-nav-user"></div>João<img class="seta-baixo" id="seta-user" 
+                    src="imagens/seta_baixo.png" alt="">
+            </button>
+    </nav>
+
+    <ul class="lista-nav-bar hide" id="lista-nav-estudar">
+        <li>
+            <div class="container-lista-nav" id="container-lista-estudar">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Por onde começar</h4>
+                        <p>Inicie aqui seu caminho na plataforma</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Meus cursos</h4>
+                        <p>Sua lista de cursos em andamento e concluídos</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Meus planos de estudo</h4>
+                        <p>Crie sua trilha de conteúdos personalizada</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Plano de estudo da empresa</h4>
+                        <p>Planos de estudo pensados para você</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Todos os cursos</h4>
+                        <p>Confira todos os cursos disponíveis</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Formações</h4>
+                        <p>Sequências de cursos preparadas por nossos professores e professoras</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav" id="container-lista-recomendacoes">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav" id="texto-recomendacoes">
+                        <h4 id="lista-nav-nome">Recomendações</h4>
+                        <p>Sugestões para você baseadas em seu histórico de navegação</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    <ul class="lista-nav-bar hide" id="lista-nav-aprofundar">
+        <li>
+            <div class="container-lista-nav" id="container-lista-alura">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Alura+</h4>
+                        <p>Vídeos extras para aprofundar seus estudos</p>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Cases</h4>
+                        <p>Aprenda a partir de casos reais de líderes de grandes empresas de tecnologia</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Podcasts</h4>
+                        <p>Explore o universo de podcasts da Alura</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav" id="container-lista-tech">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Tech Guide</h4>
+                        <p>Um guia de carreira para se tornar um profissional em TI</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="lista-nav-bar hide" id="lista-nav-praticar">
+        <li>
+            <div class="container-lista-nav" id="container-lista-days-of-code">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">7 Days of code</h4>
+                        <p>Desafios diários para praticar durante 7 dias</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Challenger</h4>
+                        <p>Junte-se a comunidade da Alura e desenvolva projetos para o seu portfólio</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav" id="container-lista-imersoes">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Imersões</h4>
+                        <p>Desafio com 5 aulas intensas para aprender e criar projetos</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    <ul class="lista-nav-bar hide" id="lista-nav-comunidade">
+        <li>
+            <div class="container-lista-nav" id="container-lista-discord">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Discord</h4>
+                        <p>Estude com outras pessoas na nossa comunidade no Discord</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Fórum</h4>
+                        <p>Interaja, converse e tire dúvidas no nosso fórum</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Minhas interações</h4>
+                        <p>Tópicos que participou no Fórum</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Planos de estudos públicos</h4>
+                        <p>Os Planos de Estudo criados pela comunidade</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav" id="container-lista-vitrine-dev">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Vitrine.Dev</h4>
+                        <p>Compartilhe seus projetos com a comunidade</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="lista-nav-bar hide" id="lista-nav-user">
+        <div class="conteudo-container-lista" id="container-lista-info-prog">
+            <div class="texto-pontuacao">
+                <img src="imagens/icone_nome.png" id="minha-pontuacao-icone" alt="">
+                <div>
+                    <h2>Minha pontuação</h2>
+                    <div class="container-pontuacao">
+                        <p id="quantidade-pontuacao">91.2k</p>
+                        <p id="pontuacao-experiencia">xp</p>
+                        <img src="imagens/imagem-pontuacao-progresso.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Perfil & Certificados</h4>
+                        <p>Gerencie seu perfil e acompanhe sua evolução</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Editar meu perfil</h4>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Editar minha vitrine.dev</h4>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Minha matrícula</h4>
+                        <p>Confira os detalhes do seu plano</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Acessar alura língua</h4>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container-lista-nav" id="container-lista-sair"><a href="login.html" id="ancora-deslogar">
+                <div class="conteudo-container-lista">
+                    <img src="imagens/mapa-lista-nav.png" alt="">
+                    <div class="texto-lista-nav">
+                        <h4 id="lista-nav-nome">Sair</h4>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </li>
+
+    </ul>
+
+</header>
+
+<body>
+    <div class="faixa-home">
+        <div class="texto-faixa-home">
+            <h1>DASHBOARD</h1>
+            <a href="" class="voltar">Voltar para o menu antigo</a>
+        </div>
+        <div class="container-espaco"></div>
+    </div>
+
+    <section class="home">
+        <div class="cursos-em-andamento">
+            <h2>Meus cursos em andamento</h2>
+            <div class="card">
+                <div class="container-andamento">
+
+                    <div class="linha-horizontal">
+                        <div class="progress" style="width: 17%;"></div>
+                    </div>
+                    <p class="porcent-estudos" id="porcent-card-1">17%</p>
+                </div>
+
+                <div class="container-andamento2">
+                    <img id="imagem-curso-andamento" src="imagens/img-curso-andamento.png" alt="">
+                    <p>ChatGPT: desvendando a IA em conversas e suas aplicações</p>
+                </div>
+                <p id="aula-atual"> <strong id="strong">Aula atual: </strong>Trabalhando com textos e como o ChatGPT
+                    funciona - 25min</p>
+                <div class="container-andamento3">
+                    <button id="btn-continuar-assistindo"><img src="imagens/logo-play.png" alt="">Continuar onde
+                        parou</button>
+                    <a href="" id="forum-do-curso">Fórum do curso</a>
+                </div>
+            </div>
+            <div class="card-menor"><img id="imagem-curso" src="imagens/imagem-curso1.png" alt="">
+                <div class="texto-curso">
+                    <h2>CURSO</h2>
+                    <p>Ansible: sua infraestrutura como código</p>
+                </div>
+                <div class="barra-progresso-cursos">
+                    <div class="linha-horizontal-menor">
+                        <div class="progress2" style="width: 2%;"></div>
+                    </div>
+                    <p style="color: #505a63b4;" class="porcent-estudos">2%</p>
+                </div>
+            </div>
+
+            <div class="card-menor" id="card-menor2"><img id="imagem-curso" src="imagens/imagem-curso2.png" alt="">
+                <div class="texto-curso">
+                    <h2>CURSO</h2>
+                    <pi id="texto-card2">HTTP: entendendo a web por baixo dos panos</p>
+                </div>
+                <div class="barra-progresso-cursos" id="barra-progresso-card2">
+                    <div class="linha-horizontal-menor">
+                        <div class="progress2" style="width: 85%;"></div>
+                    </div>
+                    <p style="color: #505a63b4;" class="porcent-estudos">85%</p>
+                </div>
+            </div>
+            <div class="card-menor" id="card-menor3"><img id="imagem-curso" src="imagens/imagem-curso3.png" alt="">
+                <div class="texto-curso">
+                    <h2>CURSO</h2>
+                    <p>C++: Conhecendo a linguagem e a STL</p>
+                </div>
+                <div class="barra-progresso-cursos">
+                    <div class="linha-horizontal-menor">
+                        <div class="progress2" style="width: 1%;"></div>
+                    </div>
+                    <p style="color: #505a63b4;" class="porcent-estudos">1%</p>
+                </div>
+            </div>
+            <a class="ver-cursos-andamento" id="ver-cursos-andamento1" href="">Ver todos os cursos em andamento</a>
+        </div>
+        <div class="container-progresso-formacao">
+            <h2>Progresso em formação</h2>
+            <div class="card-progresso">
+                <div class="texto-curso-progresso">
+                    <img id="progresso-formacao" src="imagens/imagem-progresso-formacao.png" alt="">
+                    <div>
+                        <a>Formação</a>
+                        <h3 id="formacao-front-end">Front-end</h3>
+                    </div>
+                    <div class="container-progresso">
+                        <div class="circulo-progresso">
+                            <img src="imagens/circulo_andamento.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146"
+                                class="guide-card__progress-bar__svg" fill="none"
+                                style="transform: rotate(calc( 0.23333333333333334 * 180deg));">
+                                <path
+                                    d="M146,73c0,19.4-7.7,37.9-21.4,51.6C110.9,138.3,92.4,146,73,146s-37.9-7.7-51.6-21.4C7.7,110.9,0,92.4,0,73
+                                l31,0c0,11.1,4.4,21.8,12.3,29.7C51.2,110.5,61.9,115,73,115s21.8-4.4,29.7-12.3C110.5,94.8,115,84.1,115,73L146,73z"
+                                    fill="#6bd1ff"></path>
+                            </svg>
+                        </div>
+                        <div class="andamento-curso">
+                            <div class="passos-finalizados"> 7 / 30</div>
+                            <div class="passos-finalizados-subtitulo">Passos finalizados</div>
+                            <button id="btn-continuar-formacao">Continuar formação</button>
+                        </div>
+                        <div class="progresso-curso-atual">
+                            <h3 class="titulo-curso-atual">
+                            </h3>
+                            <h3>Passo atual</h3>
+                        </div>
+                    </div>
+                    <div class="container-progresso-cursos">
+                        <img src="imagens/bolinhas-laterais-progresso.png" alt="">
+                        <div class="card-menor" id="card-menor-progresso"><img id="imagem-curso"
+                                src="imagens/logo-regex.png" alt="">
+                            <div class="texto-curso">
+                                <h2>CURSO</h2>
+                                <p>Expressões regulares: capturando textos de forma mágica</p>
+                            </div>
+                            <div class="barra-progresso" id="formacao-barra-prog">
+                                <div class="linha-horizontal-menor">
+                                    <div class="progress2" style="width: 74%;"></div>
+                                </div>
+                                <p style="color: #505a63b4;" class="porcent-estudos">74%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progresso-curso-atual2">
+                    <h3 class="titulo-curso-atual" id="bolinha-de-baixo">
+                    </h3>
+                    <h3 id="proximo-passo">Próximo passo</h3>
+                </div>
+                <div class="card-menor" id="card-prog"><img id="imagem-curso" src="imagens/logo-js.png" alt="">
+                    <div class="texto-curso">
+                        <h2>CURSO</h2>
+                        <p>Ansible: sua infraestrutura como código</p>
+                    </div>
+                    <div class="barra-progresso" id="formacao-barra-prog">
+                        <div class="linha-horizontal-menor">
+                            <div class="progress2" style="width: 0%;"></div>
+                        </div>
+                        <p style="color: #505a63b4;" class="porcent-estudos">0%</p>
+                    </div>
+                </div>
+                <div class="ver-passo-a-passo">
+                    <a class="ver-cursos-andamento" href="">Ver passo a passo completo</a>
+                    <a class="ver-cursos-andamento" id="ver-cursos-andamento2" href="">Mudar destaque mostrado aqui</a>
+                </div>
+            </div>
+    </section>
+    <section class="plano-estudos">
+        <div class="container-plano-estudos">
+            <h2 id="titulo-plano-estudos">Planos de estudos pensados pra você</h2>
+            <div class="container-progresso-formacao">
+                <div class="card-progresso" id="card-progresso-plano">
+                    <div class="texto-curso-progresso" id="texto-curso-progresso-plano">
+                        <div>
+                            <a style="color: #8696a0;">Plano de estudo</a>
+                            <h3 id="plano-estudos-titulo">Warm Up: Arquitetura e Desenvolvimento Java</h3>
+                        </div>
+                        <img src="imagens/card-estrela.png" alt="">
+                    </div>
+                    <div class="container-progresso" id="container-prog-formacao">
+                        <div class="circulo-progresso" id="circulo-andamento-formacao">
+                            <img src="imagens/circulo_andamento.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146"
+                                class="guide-card__progress-bar__svg" fill="none"
+                                style="transform: rotate(calc( 0.111111111111111* 180deg));">
+                                <path d="M146,73c0,19.4-7.7,37.9-21.4,51.6C110.9,138.3,92.4,146,73,146s-37.9-7.7-51.6-21.4C7.7,110.9,0,92.4,0,73
+	l31,0c0,11.1,4.4,21.8,12.3,29.7C51.2,110.5,61.9,115,73,115s21.8-4.4,29.7-12.3C110.5,94.8,115,84.1,115,73L146,73z"
+                                    fill="#0e0d0e"></path>
+                            </svg>
+                        </div>
+                        <div class="andamento-curso" id="andamento-formacao">
+                            <div class="passos-finalizados" id="passos-formacao"> 1 / 9</div>
+                            <div class="passos-finalizados-subtitulo">Cursos finalizados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="ver-planos-estudos" href="">Ver todos os planos de estudos da empresa</a>
+        </div>
+        </div>
+        <div class="container-invisivel"></div>
+    </section>
+    <section class="novidades-e-formacoes">
+        <div class="container-novidades">
+            <h1>Novidades</h1>
+            <div class="container-card-novidades">
+                <div class="card-novidades">
+                    <img id="img-novidades" src="imagens/service-design.png" alt="">
+
+                    <div class="curso-bloco">
+                        <p>Curso</p>
+                    </div>
+                    <div class="texto-novidades" id="texto-novidades1">
+                        <p>Service Design: exploração em Design</p>
+                        <p id="texto-dois">de Serviço</p>
+                    </div>
+                    <div id="texto-minutos">
+                        <p class="texto-detalhes" style="color:#dc6ebe;">UX & Design</p>
+                        <p>32 minutos atrás</p>
+                    </div>
+                </div>
+                <div class="card-novidades">
+                    <img id="img-novidades" src="imagens/kafka-sprint.png" alt="">
+
+                    <div class="curso-bloco">
+                        <p>Curso</p>
+                    </div>
+                    <div class="texto-novidades" id="texto-novidades2">
+                        <p>Liderança transformacional: criando</p>
+                        <p id="texto-dois">uma cultura de excelência</p>
+                    </div>
+                    <div id="texto-minutos">
+                        <p class="texto-detalhes" style="color:#ff8c2a;">Inovação & Gestão</p>
+                        <p>3 dias atrás</p>
+                    </div>
+                </div>
+                <div class="card-novidades">
+                    <img id="img-novidades" src="imagens/lideranca.png" alt="">
+
+                    <div class="curso-bloco">
+                        <p>Curso</p>
+                    </div>
+                    <div class="texto-novidades" id="texto-novidades3">
+                        <p>TypeScript na prática: implemente um</p>
+                        <p id="texto-dois">projeto completo com TypeScript e módulos</p>
+                    </div>
+                    <div id="texto-minutos">
+                        <p class="texto-detalhes" style="color:#6bd1ff;">Front-end</p>
+                        <p>3 dias atrás</p>
+                    </div>
+                </div>
+                <div class="card-novidades">
+
+                    <img id="img-novidades" src="imagens/typescript.png" alt="">
+
+                    <div class="curso-bloco">
+                        <p>Curso</p>
+                    </div>
+                    <div class="texto-novidades" id="texto-novidades4">
+                        <p>Carreira internacional: descubra como</p>
+                        <p id="texto-dois">conquistar sua oportunidade no exterior</p>
+                    </div>
+
+                    <div id="texto-minutos">
+                        <p class="texto-detalhes" style="color:#ff8c2a;">Inovação & Gestão</p>
+                        <p>3 dias atrás</p>
+                    </div>
+                </div>
+            </div>
+            <a id="ver-cursos-andamento" href="">Conferir todas as novidades</a>
+        </div>
+        <div class="outras-formacoes">
+            <h1>Outras Formações e Planos de Estudo que sigo</h1>
+            <div class="cards-formacoes">
+                <div class="card-progresso" id="card-outras-formacoes">
+                    <div class="texto-curso-progresso">
+                        <div class="container-texto-e-img">
+                            <div class="texto-card-curso-prog">
+                                <a>Formação</a>
+                                <h3 id="plano-estudos-titulo">Front-end</h3>
+                                <a id="card-formacao-a">Removida da grade oficial em 15/12/2022, veja as mudanças</a>
+                            </div>
+                            <img src="imagens/imagem-progresso-formacao.png" alt="">
+                        </div>
+                        <div class="container-progresso">
+                            <div class="circulo-progresso" id="circulo-andamento-formacao">
+                                <img src="imagens/circulo_andamento.png" alt="">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146"
+                                    class="guide-card__progress-bar__svg" fill="none"
+                                    style="transform: rotate(calc( 0.3076923076923077 * 180deg));">
+                                    <path d="M146,73c0,19.4-7.7,37.9-21.4,51.6C110.9,138.3,92.4,146,73,146s-37.9-7.7-51.6-21.4C7.7,110.9,0,92.4,0,73
+	l31,0c0,11.1,4.4,21.8,12.3,29.7C51.2,110.5,61.9,115,73,115s21.8-4.4,29.7-12.3C110.5,94.8,115,84.1,115,73L146,73z"
+                                        fill="#6bd1ff"></path>
+                                </svg>
+                            </div>
+                            <div class="andamento-curso" id="andamento-formacao">
+                                <div class="passos-finalizados" id="passos-formacao"> 4 / 13</div>
+                                <div class="passos-finalizados-subtitulo">Cursos finalizados</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-progresso" id="card-outras-formacoes2">
+                    <div class="texto-curso-progresso">
+                        <div class="container-card-prog2">
+                            <div class="texto-card-progresso2">
+                                <a style="color: #00c86f;">Formação</a>
+                                <h3 id="plano-estudos-titulo">Certificação Java</h3>
+                            </div>
+                            <img src="imagens/imagem-progresso-formacao-verde.png" alt="">
+                        </div>
+                        <div class="container-progresso">
+                            <div class="circulo-progresso" id="circulo-andamento-formacao">
+                                <img src="imagens/circulo_andamento.png" alt="">
+                            </div>
+                            <div class="andamento-curso" id="andamento-formacao">
+                                <div class="passos-finalizados" id="passos-formacao"> 0 / 9</div>
+                                <div class="passos-finalizados-subtitulo">Cursos finalizados</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="ancora-outras-formacoes" href="">Outras Formações e Planos de Estudo que sigo</a>
+        </div>
+        </div>
+    </section>
+    <section class="novos-cursos">
+        <div class="titulo-novos-cursos">
+            <h2>Descubra novos cursos</h2>
+            <h2 id="titulo-invisivel"></h2>
+        </div>
+        <div class="linhas-novos-cursos">
+            <div class="linha-horizontal-menor" id="linha-horizontal-novos-cursos">
+                <p>ESCOLAS</p>
+            </div>
+            <div class="linha-horizontal-menor" id="linha-horizontal-novos-cursos2">
+                <p>FORMAÇÕES</p>
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-programacao">
+            <div class="container-caixa-formacao" style="background-color:#00c86f ">
+                <div class="imagem-formacao"><img src="imagens/cursos-programacao.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>Programação</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider1" style="z-index: 1000;">
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="" class="carrossel-link-de-controle active" ></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a class="carrossel-link-de-controle" id="ultimo-link-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active"
+                    style="z-index: 10;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao"
+                    style="z-index: 9; ">
+                    <div>
+                        <p>Formação Programação paralela com Threads em Java...</p>
+                        <p>Formação Aprofunde em PHP com arq...</p>
+                        <p>Formação Windows Forms com C#</p>
+                    </div>
+                    <div>
+                        <p>Formação Linguagem Kotlin</p>
+                        <p>Formação Linguagem C++</p>
+                        <p>Formação Aprofunde em Java com arq...</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao"
+                    style="z-index: 8;">
+                    <div>
+                        <p>Formação Django REST APIs: crie aplic..</p>
+                        <p>Formação Aprenda a programar em Ja</p>
+                        <p>Formação Carreira QA: processos e au...</p>
+                    </div>
+                    <div>
+                        <p>Formação Engenharia de software</p>
+                        <p>Formação Boas práticas em PHP</p>
+                        <p>Formação Boas práticas em C#...</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao"
+                    style="z-index: 7;">
+                    <div>
+                        <p>Formação Linguagem Go</p>
+                        <p>Formação Testes em .NET</p>
+                        <p>Formação Kotlin e Spring Boot</p>
+                    </div>
+                    <div>
+                        <p>Formação Linguagem Elixir</p>
+                        <p>Formação Aprofunde em Java com arq...</p>
+                        <p>FFormação Autenticação, testes e segu...</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao"
+                    style="z-index: 6;">
+                    <div>
+                        <p>Formação Symfony e Doctrine: crie ap...</p>
+                        <p>Formação Começando com Flask: fra</p>
+                        <p>Formação C# e Orientação a Objetos:...</p>
+                    </div>
+                    <div>
+                        <p>Formação Aprofunde em .NET com Ar...</p>
+                        <p>Formação Linguagem Rust</p>
+                        <p>Formação Full stack JavaScript: crie u...</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao"
+                    style="z-index: 5;">
+                    <div>
+                        <p>Formação Linguagem C</p>
+                        <p>Formação Laravel: crie aplicações web</p>
+                        <p>Formação PowerShell: automatize sua...</p>
+                    </div>
+                    <div>
+                        <p>Formação Nest.js: aplicações Node.js...</p>
+                        <p>Formação Aprofunde em Kotlin e Dev</p>
+                        <p>Formação Java e Spring Boot</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao"
+                    style="z-index: 4;">
+                    <div>
+                        <p>Formação Java Web: crie aplicações co...</p>
+                        <p>Formação ASP.Net Core: crie aplicaçõe...</p>
+                        <p>Formação APIs com Node.js e Express</p>
+                    </div>
+                    <div>
+                        <p>Formação Django: crie aplicações em...</p>
+                        <p>Formação Aprofunde em Node.js com...</p>
+                        <p>Formação A partir do zero: iniciante e...</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao" 
+                    style="z-index: 3">
+                    <div>
+                        <p>Formação Integre aplicações Java com...</p>
+                        <p>Formação Aprenda Java com Orientaç...</p>
+                        <p>Formação Aprofunde em PHP com pro...</p>
+                    </div>
+                    <div>
+                        <p>Formação Aprenda a programar em C...</p>
+                        <p>Formação Java Web: crie aplicações us</p>
+                        <p>Formação Aprenda a programar em P...</p>
+                    </div>
+
+                </div>
+                <div class="conteudo-container-formacoes-descricao"  id="ultimo-container"
+                    style="z-index: 2; transform: translateX(27px) scale(.95);">
+                    <div>
+                        <p>Formação Aprenda a programar em P...</p>
+                        <p>Formação PHP Web: crie aplicações w</p>
+                        <p>Formação Linguagem Clojure</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-front-end">
+            <div class="container-caixa-formacao" style="background-color: #6bd1ff">
+                <div class="imagem-formacao"><img src="imagens/cursos-frontend.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>Front-end</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider2" style="z-index: 1000; border-left:2px solid #6bd1ff;"   >
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="" class="carrossel-link-de-controle active"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active" style="z-index: 10;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 9;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 8;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="transform: translateX(27px) scale(.95); z-index: 1;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-data-science">
+            <div class="container-caixa-formacao" style="background-color:#9cd33b ">
+                <div class="imagem-formacao"><img src="imagens/cursos-data-science.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>Data-Science</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider3" style="z-index: 1000; border-left: 2px solid #9cd33b">
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="" class="carrossel-link-de-controle active"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active" style="z-index: 7;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 6;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 5;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 4;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index:3;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 2;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="transform: translateX(27px) scale(.95); z-index: 1;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-mobile">
+            <div class="container-caixa-formacao" style="background-color: #7b71ff">
+                <div class="imagem-formacao"><img src="imagens/cursos-ia.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>Inteligencia artificial</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider4" style="z-index: 1000; border-left: 2px solid #7b71ff">
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="" class="carrossel-link-de-controle active"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active" style="z-index: 2;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="transform: translateX(27px) scale(.95); z-index: 1;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-devops">
+            <div class="container-caixa-formacao" style="background-color:#f16165">
+                <div class="imagem-formacao"><img src="imagens/cursos-devops.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>DevOps</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider5" style="z-index: 1000; border-left: 2px solid #f16165">
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="" class="carrossel-link-de-controle active"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active" style="z-index: 5;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 4;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 3;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 2;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao"  style="transform: translateX(27px) scale(.95); z-index: 1;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-ux">
+            <div class="container-caixa-formacao" style="background-color:#dc6ebe ">
+                <div class="imagem-formacao"><img src="imagens/cursos-ux.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>UX & Design</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider6" style="z-index: 1000; border-left: 2px solid #dc6ebe">
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="" class="carrossel-link-de-controle active "></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active" style="z-index: 7;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao"style="z-index: 6;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 5;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 4;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 3;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 2;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="transform: translateX(27px) scale(.95); z-index: 1;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-mobile">
+            <div class="container-caixa-formacao" style="background-color: #ffba05">
+                <div class="imagem-formacao"><img src="imagens/cursos-mobile.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>Mobile</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider7" style="z-index: 1000; border-left: 2px solid #ffba05">
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="" class="carrossel-link-de-controle active"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active"  style="z-index: 3;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 2;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="transform: translateX(27px) scale(.95); z-index: 1;" >
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-conteudo-formacoes" id="conteudo-formacoes-inovacao">
+            <div class="container-caixa-formacao" style="background-color: #ff8c2a">
+                <div class="imagem-formacao"><img src="imagens/cursos-gestao.png" alt=""></div>
+                <div class="caixa-formacao-textos">
+                    <h1>Inovação & Gestão</h1>
+                    <a href="">Ver todos os cursos</a>
+                </div>
+            </div>
+            <div class="container-formacao-descricao slider8" style="z-index: 1000; border-left: 2px solid #ff8c2a">
+                <ul class="lista-controle-carrosel" style="z-index: 1000;">
+                    <a href="#" class="carrossel-link-de-controle active"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                    <a href="#" class="carrossel-link-de-controle"></a>
+                </ul>
+                <div class="conteudo-container-formacoes-descricao active" style="z-index: 9;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 8;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 7;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 6;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 5;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 4;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 3;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao" style="z-index: 2;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+                <div class="conteudo-container-formacoes-descricao"  style="transform: translateX(27px) scale(.95); z-index: 1;">
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                    <div>
+                        <p>Formação Desenvolvimento de Jogos c...</p>
+                        <p>Formação Certificação java</p>
+                        <p>Formação Raspberry PI e internet das...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="carreiras">
+        <div class="carreira-sem-fronteiras">
+            <div class="titulos-podcasts">
+                <h1 class="btn-carreiras active" data-container="container-hipsters">Hipsters</h1>
+                <h1 class="btn-carreiras" data-container="container-like-a-boss">Like a Boss</h1>
+                <h1 class="btn-carreiras" data-container="container-scuba-dev">Scuba Dev</h1>
+                <h1 class="btn-carreiras" data-container="container-layers-tech">Layers Tech</h1>
+                <h1 class="btn-carreiras" data-container="container-carreira-fronteiras">Carreira sem...</h1>
+                <h1 class="btn-carreiras" data-container="container-dev-fronteiras" >Dev sem fron...</h1>
+                <h1 class="btn-carreiras" data-container="container-pm3-talks" >PM3 Talks</h1>
+                <h1 class="btn-carreiras" data-container="container-bolha-dev" >Bolha Dev</h1>
+            </div>
+        </div>
+        <div class="linha-carreiras"></div>
+        <div class="container-titulo-carreiras" id="container-hipsters">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de Hipsters</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster2.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-hipster8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-titulo-carreiras" id="container-like-a-boss">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de Like a boss</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss2.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-like-a-boss8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-titulo-carreiras" id="container-scuba-dev">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de Scuba-dev</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev2.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-scuba-dev8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-titulo-carreiras" id="container-layers-tech">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de Layers-tech</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech2.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-layers-tech8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-titulo-carreiras" id="container-carreira-fronteiras">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de Carreira sem Fronteiras</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras2.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-carreira-fronteiras8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-titulo-carreiras" id="container-dev-fronteiras">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de Dev sem Fronteiras</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras2.png" id="imagem-dois-dev-fronteiras" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-dev-fronteiras8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-titulo-carreiras" id="container-pm3-talks">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de PM3 Talks</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks2.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-pm3-talks8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-titulo-carreiras" id="container-bolha-dev">
+            <div class="textos-carreiras">
+                <div class="titulo-carreiras"><img src="imagens/logo-fone-carreiras.png" alt="">
+                    <h1>Escute os últimos episódios de Bolha Dev</h1>
+                </div>
+                <p class="descricao-podcast">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra
+                    em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em
+                    tecnologia. Ah! E sempre com convidados.</p>
+                    <div class="container-cards-carreiras">
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev1.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev2.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev3.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev4.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev5.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev6.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev7.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="card-carreira">
+                            <p class="card-texto">TechGuide: Storytelling com dados</p>
+                            <p class="card-texto" id="card-texto2">Hipsters Ponto Tech #368</p>
+                            <img src="imagens/imagem-bolha-dev8.png" alt="">
+                            <div class="data-e-tempo">
+                                <img src="imagens/imagem-data-carreiras.png" id="data-carreiras" alt=""><p>01/08/2023</p>
+                                <img src="imagens/imagem-carga-carreiras.png" id="carga-carreiras" alt=""><p>38 min.</p>
+                            </div>
+                        </div>
+                        <div class="ver-todos-os-podcasts">
+                            <img src="imagens/imagem-ver-todos-podcasts.png" alt="">
+                        <a id="ver-todos-podcasts" href="">Ver todos os podcasts do hipsters</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+
+    </section>
+<footer>
+        <div class="faixa-footer"></div>
+        <div class="linha"></div>
+        <div class="footer-itens">
+            <div class="imagem-logo-container">
+                <img id="imagem_logo2" src="imagens/logo_alura.png" alt="">
+            </div>
+            <ul>
+                <li>SOBRE A ALURA</li>
+                <li>DÚVIDAS FREQUENTES</li>
+                <li>SUGIRA UM CURSO</li>
+                <li>SUGIRA UMA FUNCIONALIDADE</li>
+            </ul>
+            <div class="ancoras-footer">
+                <a href="">BLOG DA ALURA</a>
+                <a href="">DISCORD ALURA</a>
+            </div>
+            <div class="acompanhe">
+                <h6 style="font-weight: 900;">ACOMPANHE-NOS</h6>
+                <div class="logos">
+                    <img class="logo" src="imagens/logo-youtube.png" alt="">
+                    <img class="logo" src="imagens/logo-facebook.png" alt="">
+                    <img class="logo" src="imagens/logo-twitter.png" alt="">
+                    <img class="logo" src="imagens/logo-spotify.png" alt="">
+                    <img class="logo" src="imagens/logo-instagram.png" alt="">
+                </div>
+            </div>
+            <div class="acompanhe" id="acompanhe2">
+                <h6 style="font-weight: 900">APPS</h6>
+                <div class="logos">
+                    <img class="logo" src="imagens/logo-play-store.png" alt="">
+                    <img class="logo" src="imagens/logo-apple.png" alt="">
+                </div>
+            </div>
+    </footer>
+ 
+</body>
+</html>
+<script src="js/index.js"></script>   
