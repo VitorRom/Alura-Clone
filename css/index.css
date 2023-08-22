@@ -77,7 +77,7 @@ input:focus-visible {
     width: 80px;
     margin-top: -20px;
     height: 22px;
-    background: url(/imagens/fechar-pesquisa-header.png) no-repeat 50%;
+    background: url('/imagens/fechar-pesquisa-header.png') no-repeat 50%;
     background-size: contain;
     border: none;
     margin-right: 220px;
@@ -848,7 +848,7 @@ button {
     width: 21px;
     height: 21px;
     margin-right: 5px;
-    background-image: url(/imagens/bolinha-progresso-curso.png)
+    background-image: url('/imagens/bolinha-progresso-curso.png');
 }
 
 .progresso-curso-atual {
