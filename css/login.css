@@ -20,13 +20,13 @@ body::after{
     display: block;
     top: 0;
     right: 0;
-    background-image: url('imagens/luz-baixo.png');
+    background-image: url('../imagens/luz-baixo.png');
     
 }
 
 body::before{
     top: 50%;
-    background-image: url('imagens/luz-cima.png');
+    background-image: url('../imagens/luz-cima.png');
     filter: blur(50px);
 }
 
